@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Germany Train Stations Map
 
-## Getting Started
+### Application: [Rail-Map](https://rail-map-de.vercel.app/)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Description:
+  A Next + TypeScript + Leaflet app that visualizes train stations in Germany. 
+  Users can filter stations by city, select individual stations, and explore them 
+  on an interactive map. State management is handled with Zustand and styling is done with TailwindCSS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features:
+  - Fetch train station data from a public API (GitHub Gist)
+  - Display stations on a Leaflet map with clustering
+  - City and station dropdown filters
+  - Click a city to zoom to its area
+  - Click a station to zoom directly to it
+  - Responsive and clean UI
+  - Unit tests using Jest + React Testing Library
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Technologies:
+  - frontend:
+    - Next
+    - TypeScript
+    - TailwindCSS
+  - mapping:
+    - Leaflet.js
+  - state_management:
+    - Zustand
+  - dev_tools:
+    - Jest
+    - React Testing Library
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation:
+    - Clone the repository:
+      command: git clone https://github.com/yourusername/railmap.git
+    - Navigate to project directory:
+      command: cd railmap
+    - Install dependencies:
+      command: npm install
+    - Run development server:
+      command: npm dev
+    - Run tests:
+      command: npm test
 
-## Learn More
+### Usage:
+  - Select a city from the dropdown to filter stations and zoom the map
+  - Select a station to zoom directly to that station
+  - Click markers on the map to view station information
+  - Marker clusters can be clicked to zoom in and reveal individual stations
 
-To learn more about Next.js, take a look at the following resources:
+### Folder_structure:
+  ### src:
+    - components: "React components (StationMap, StationList, etc.)"
+    - store: "Zustand store for state management"
+    - styles: "Tailwind or global styles"
+    - tests: "Unit and integration tests"
+    - page.tsx: "Main application entry"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Testing:
+  - Description:
+    Tests cover rendering of city and station dropdowns, filtering stations by city,
+    map interactions (zoom on station click), and marker clustering behavior.
+- command: npm test
